@@ -25,6 +25,20 @@ function listBtn() {
     HidAndShow.style.display = "block";
   }
 }
+function IndexlistBtn() {
+  var listBtn = document.getElementById('listBtn');
+  var textlistn = document.getElementById('HidAndShow');
+  if (textlistn.style.display ==="block") {
+    HidAndShow.style.display = "none";
+	var mouseFunction = document.getElementById('mouseFunction');
+	mouseFunction.style['background-color'] = "";
+  } else {
+    HidAndShow.style.display = "block";
+	var mouseFunction = document.getElementById('mouseFunction');
+	mouseFunction.style['background-color'] = "rgba(0, 0, 0, .6)";
+	mouseFunction.style['transition'] = "background-color 0.4s";
+  }
+}
 
 window.onresize=function(){  //每次視窗改變都會載入下列事件
 	var listBtn = document.getElementById('listBtn');

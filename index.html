@@ -27,9 +27,57 @@
 </head>
 
 <body>
-	 <!--上排按鈕-->
-			<iframe id="ifrm"   class=" iframeTopIndex" scrolling="no" src="menu.html" frameborder="0" style="border: 0px; width: 100%; height: 500px;" allowfullscreen ></iframe>
-
+	 <!--上排按鈕↓↓-->
+		<nav class="navbar  menuIndex fixed-top " id="mouseFunction" onmouseover=" mouseOver() " onmouseout=" mouseOut() ">
+			  <a href="index.html"  target="_parent">
+				<img class="logo" src="img/LOGO.png" />
+			  </a>
+			  
+			 <div id="listBtn" onclick="listBtn()" class="hide-in-web" >
+					<img  src="img/ListBTN.svg" />
+			  </div>
+			  
+			 <div class="list-hide-in-web navbar-collapse" id="HidAndShow" >
+				<ul class="navbar-nav text-center ml-auto">
+					<il>
+						<a  href="Page1.html" class="nav-linkDIV" target="_parent">第一頁</a>
+					</il>				
+					<il>
+						<a  href="Page2.html" class="nav-linkDIV" target="_parent">第二頁</a>
+					</il>				
+					<il>
+						<a  href="Page3.html" class="nav-linkDIV" target="_parent">第三頁</a>
+					</il>				
+					<il>
+						<a  href="Page4.html" class="nav-linkDIV" target="_parent">第四頁</a>
+					</il>
+					<il>
+						<a  href="Page5.html" class="nav-linkDIV" target="_parent">第五頁</a>
+					</il>
+					<il>
+						<span class="line">│</span>
+						<a data-v-2c81422f="" href="https://www.facebook.com/IsFlyingDream" target="_blank" class="out-link">
+							<img  src="img/BTN-facebook.svg" alt=""/>
+						</a>
+						<a data-v-2c81422f="" href="https://www.pixiv.net/users/2567810" target="_blank" class="out-link">
+							<img src="img/BTN-pixiv.svg" alt=""/>
+						</a>
+						<a data-v-2c81422f="" href="https://twitter.com/IsFlyingDream" target="_blank" class="out-link">
+							<img src="img/BTN-twitter.svg" alt=""/>
+						</a>
+						<a data-v-2c81422f="" href="https://www.instagram.com/isflyingdream/" target="_blank" class="out-link">
+							<img src="img/BTN-instagram.svg" alt=""/>
+						</a>
+						<a data-v-2c81422f="" href="https://www.plurk.com/IsFlyingDream" target="_blank" class="out-link">
+							<img src="img/BTN-Plurk.svg" alt=""/>
+						</a>
+						<span class="line">│</span>
+					</il>
+				</ul>
+			</div>
+			 
+		</nav>
+	 <!--上排按鈕↑↑-->
 
 	   <!--頁首大圖輪播由此開始↓↓-->
 		<div id="carouselExampleIndicators" class="carousel slide headDIV" data-ride="carousel">

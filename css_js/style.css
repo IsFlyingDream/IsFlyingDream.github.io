@@ -17,10 +17,11 @@ body {
 }
 
 .webtoonIcon{
-	margin-top: 60vh;
+	position:absolute;
+	bottom:5px;
 	margin-left: 5px;
 	-webkit-filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7));
-    filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7))
+	filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7))
 }
 
 @media screen and   (min-width:1025px){

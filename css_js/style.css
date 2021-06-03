@@ -93,8 +93,11 @@ h5 {
     text-decoration: none;
     background-color: transparent;
 }
-.logo{
+.Indexlogo{
 	width: 130px;
+}
+.logo{
+	width: 80px;
 }
 
 .nav-linkDIV{

@@ -40,3 +40,17 @@ window.onresize=function(){  //每次視窗改變都會載入下列事件
 };
 
 //上方菜單顯示與隱藏的按鈕↑↑
+
+
+//滑鼠移入上方菜單↓↓
+function mouseOver() {
+	var mouseFunction = document.getElementById('mouseFunction');
+	mouseFunction.style['background-color'] = "rgba(0, 0, 0, .6)";
+	mouseFunction.style['transition'] = "background-color 0.4s";
+}
+function mouseOut() {
+	var mouseFunction = document.getElementById('mouseFunction');
+	mouseFunction.style['background-color'] = "";
+}
+
+//滑鼠移入上方菜單↑↑

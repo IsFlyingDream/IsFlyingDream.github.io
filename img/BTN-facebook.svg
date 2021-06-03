@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>BTN-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Homepage" transform="translate(-1241.000000, -24.000000)">
+            <g id="Group-21" transform="translate(1241.000000, 24.000000)">
+                <circle id="Oval-Copy" cx="12" cy="12" r="12"></circle>
+                <path d="M13.7123288,20.25 L13.7123288,13.687508 L15.9594178,13.687508 L16.3869863,10.9728315 L13.7123288,10.9728315 L13.7123288,9.21117157 C13.7123288,8.46846909 14.0859332,7.74456759 15.2839349,7.74456759 L16.5,7.74456759 L16.5,5.43342409 C16.5,5.43342409 15.3963647,5.25 14.34125,5.25 C12.138387,5.25 10.6986301,6.55010993 10.6986301,8.90380782 L10.6986301,10.9728315 L8.25,10.9728315 L8.25,13.687508 L10.6986301,13.687508 L10.6986301,20.25" id="Fill-1" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

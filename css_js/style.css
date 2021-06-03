@@ -1,0 +1,147 @@
+/* 頁首輪播↓↓*/
+h3 {
+ 
+  text-shadow:0 0 0.2em black,-0 -0 0.2em black;
+}
+.ashow{
+  color: white;
+   text-shadow:0 0 0.3em black,-0 -0 0.3em black;
+}
+
+.titleImg{
+	width: 50%;
+  height: auto;
+}
+
+body {
+    padding-top: 0px;
+}
+
+/* 頁首輪播↑↑*/
+
+/*服務欄↓↓*/
+.justify-content-around {
+    justify-content: space-around!important;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.centerDIV{
+	position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+	flex: 0 0 25%;
+}
+.ServiceDIV{
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+	margin-top: 3rem!important;
+}
+.text-center {
+    text-align: center!important;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+
+/*服務欄↑↑*/
+
+/*上方導覽列↓↓*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.menu{
+	background-color: rgba(0, 0, 0, .6);
+	 align-items: flex-start!important;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.line{
+    color: white;
+    display: inline-block;
+    padding: .5rem 0rem;
+    text-decoration: none;
+    background-color: transparent;
+}
+.logo{
+	width: 130px;
+}
+
+.nav-linkDIV{
+	color: #fff !important;
+	display: block;
+	padding: .5rem 1rem;
+}
+.navbar-nav{
+	display: flex;
+	list-style: none;
+	margin-top: 0;
+}
+.navbar-collapse{
+	flex-basis: 100%;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+.out-link {
+    color: white;
+    display: inline-block;
+    padding: .5rem .3rem;
+    text-decoration: none;
+    background-color: transparent;
+    text-align: center;
+    border: 0;
+}
+
+
+@media screen and  (min-width: 600px){
+	.navbar-nav, .nav-linkDIV {
+		flex-direction: row;
+	}
+	 .navbar-collapse {
+		display: flex!important; 
+		flex-basis: auto; 
+	}
+	
+}
+/*上方導覽列↑↑*/
+
+/*外聯上方狀態列設定↓↓*/
+.iframeTopIndex {
+	position: fixed;
+	width: 100%; 
+	z-index: 999;
+}
+.iframeTop{
+	width: 100%;
+	
+}
+/*外聯上方狀態列設定↑↑*/

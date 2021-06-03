@@ -20,8 +20,8 @@ body {
 	position:absolute;
 	bottom:5px;
 	margin-left: 5px;
-	-webkit-filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7));
-	filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7))
+	-webkit-filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.3))
 }
 
 @media screen and   (min-width:1025px){

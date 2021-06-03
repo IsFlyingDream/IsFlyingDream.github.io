@@ -1,6 +1,5 @@
 /* 頁首輪播↓↓*/
-h3 {
- 
+h3 { 
   text-shadow:0 0 0.2em black,-0 -0 0.2em black;
 }
 .ashow{
@@ -29,6 +28,9 @@ body {
 	width: 90%;
   height: auto;
 }
+	
+}
+
 /* 頁首輪播↑↑*/
 
 /*服務欄↓↓*/

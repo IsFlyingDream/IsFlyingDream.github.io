@@ -1,6 +1,11 @@
+/*首頁第一個輪播美編調整↓↓*/
+
+
+/*首頁第一個輪播美編調整↑↑*/
+
 /* 頁首輪播↓↓*/
-h3 { 
-  text-shadow:0 0 0.2em black,-0 -0 0.2em black;
+h1 { 
+  text-shadow:0 0 0.2em rgba(0, 0, 0, 0.8),-0 -0 0.2em rgba(0, 0, 0, 0.8);
 }
 .ashow{
   color: white;
@@ -24,6 +29,16 @@ body {
 	filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.3))
 }
 
+.carousel{
+	display:absolute; 
+	justify-content:center; 
+	align-items:center;
+}
+
+#VueApp , .carouselExampleIndicators{
+	height: 100%;
+}
+
 @media screen and   (min-width:1025px){
 	.ComicLogo{
 			width: 40%;
@@ -31,7 +46,7 @@ body {
 		}
 }
 
-@media screen and  (max-width: 760px) {
+@media screen and  (max-width: 870px) {
 		.ComicLogo{
 			width: 250px;
 		  height: auto;
@@ -154,12 +169,12 @@ h5 {
     filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7))
 }
 
-@media screen and  (max-width: 760px){
+@media screen and  (max-width: 870px){
 	.list-hide-in-web{
 		display:none;	
 	}
 }
-@media screen and  (min-width: 760px){
+@media screen and  (min-width: 870px){
 	.navbar-nav, .nav-linkDIV {
 		flex-direction: row;
 		float: right;
@@ -186,6 +201,12 @@ h5 {
 }
 .iframeTop{
 	width: 100%;
-	
+	display:flex; 
+	justify-content:center; 
+	align-items:center;
+	border: 0px;
+	height: 500px;
+
 }
 /*外聯上方狀態列設定↑↑*/
+

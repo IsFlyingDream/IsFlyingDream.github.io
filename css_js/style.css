@@ -55,6 +55,13 @@ body {
 
 /* 頁首輪播↑↑*/
 
+/*關於我圖片大小↓↓*/
+.about-img{
+	padding: 5px;	
+	height: 80px;
+}
+/* 關於我圖片大小↑↑*/
+
 /*服務欄↓↓*/
 .justify-content-around {
     justify-content: space-around!important;
@@ -80,6 +87,15 @@ body {
     margin-left: auto;
 	margin-top: 3rem!important;
 }
+.ServiceDIV3{
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+	margin-top: 100px;
+}
+
 .text-center {
     text-align: center!important;
 }
@@ -97,6 +113,21 @@ h5 {
 
 
 /*服務欄↑↑*/
+
+/*page3滿版背景圖↓↓*/
+.page3_div{
+	background-color: rgba(255, 255, 255, 0.5);
+	text-shadow: 0 0 0.5em white, 0 0 0.5em white;
+}
+.body3-background{
+	background-image: url('../img/dCwz6AI.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+/*滿版背景圖↑↑*/
 
 /*上方導覽列↓↓*/
 .fixed-top {
@@ -210,3 +241,9 @@ h5 {
 }
 /*外聯上方狀態列設定↑↑*/
 
+/*最下方資訊↓↓*/
+footer{
+	background-color: black;
+	color: #fff;
+}
+/*最下方資訊↑↑*/

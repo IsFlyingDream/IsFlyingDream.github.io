@@ -218,21 +218,16 @@ h5 {
 /*上方導覽列↑↑*/
 
 /*外聯上方狀態列設定↓↓*/
-.iframeTopIndex {
-	position: fixed;
-	width: 100%; 
-	z-index: -1;
-}
 .iframeTop{
 	width: 100%;
 	display:flex; 
 	justify-content:center; 
 	align-items:center;
-	z-index: -1;
-	border: 0px;
-	height: 500px;
-
+	z-index: 10;
+	border: 0px;	
+	height: 250px;	
 }
+/*height: 250px;*/
 /*外聯上方狀態列設定↑↑*/
 
 /*最下方資訊↓↓*/
@@ -250,7 +245,7 @@ footer{
 /* 關於我圖片大小↑↑*/
 
 /*作品集圖片大小↓↓*/
-.Portfolio-img{
+.Portfolio-url{
 	z-index: 100;
 }
 /* 關於我圖片大小↑↑*/

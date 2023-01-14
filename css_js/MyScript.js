@@ -76,8 +76,6 @@ function mouseOut() {
 // 以下改成Vue用法----------------------------------------------------------------------------------------------------------------
 
 
-
-
 const vm = new Vue({
 	el: '#VueApp',		
 	data:{
@@ -92,9 +90,9 @@ const vm = new Vue({
 	methods: {
 		listBtn() {//上方菜單顯示與隱藏的按鈕↓↓
 			var listBtn = document.getElementById('listBtn');
-			var textlistn = document.getElementById('HidAndShow');
+			var textlistn = document.getElementById('HidAndShow');	
 			if (textlistn.style.display === "block") {
-				HidAndShow.style.display = "none";
+				HidAndShow.style.display = "none";				
 			} else {
 				HidAndShow.style.display = "block";
 			}
@@ -123,8 +121,6 @@ const vm = new Vue({
 			mouseFunction.style['background-color'] = "";
 		},
 		imgplay(num){//作品集頁面，點擊則會換成動圖		//因為gif太大，放到IMG會轉成影片，就不使用這功能了。	
-			console.log("in");			
-			console.log(this.portfolios[num].src);
 			let tempStr = this.portfolios[num].src;
 			let types = tempStr.substr(tempStr.length-3,3);
 			if(types=="png"){
@@ -132,7 +128,7 @@ const vm = new Vue({
 			}else{
 				this.portfolios[num].src = this.portfolios[num].png;
 			}
-		}
+		},
 	},
 });
 

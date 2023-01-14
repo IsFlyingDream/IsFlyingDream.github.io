@@ -79,7 +79,16 @@ function mouseOut() {
 
 
 const vm = new Vue({
-	el: '#VueApp',
+	el: '#VueApp',		
+	data:{
+		portfolios:[
+			{num:1,src:'img/Portfolio1.png'},			
+			{num:2,src:'img/Portfolio2.png'},
+			{num:3,src:'img/Portfolio3.png'},
+			{num:4,src:'img/Portfolio4.png'},
+			{num:5,src:'img/Portfolio5.png'},
+		],
+	},
 	methods: {
 		listBtn() {//上方菜單顯示與隱藏的按鈕↓↓
 			var listBtn = document.getElementById('listBtn');
@@ -113,6 +122,20 @@ const vm = new Vue({
 			var mouseFunction = document.getElementById('mouseFunction');
 			mouseFunction.style['background-color'] = "";
 		},
+		imgplay(num){//作品集頁面，點擊則會換成動圖			
+			console.log("in");			
+			console.log(this.portfolios[num].src);
+			let tempStr = this.portfolios[num].src;
+			let types = tempStr.substr(tempStr.length-3,3);
+			let url = tempStr.substr(0,tempStr.length-3);
+			if(types=="png"){
+				url = url+"gif";
+				this.portfolios[num].src = url;
+			}else if(types=="gif"){
+				url = url+"png";
+				this.portfolios[num].src = url;
+			}
+		}
 	},
 });
 
@@ -160,3 +183,4 @@ $('.carousel').carousel({
 	interval: 5000
   });
 //改變輪播時間↑↑-----------------------------
+

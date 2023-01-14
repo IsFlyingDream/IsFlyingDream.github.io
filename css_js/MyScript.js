@@ -82,11 +82,11 @@ const vm = new Vue({
 	el: '#VueApp',		
 	data:{
 		portfolios:[
-			{num:1,src:'img/Portfolio1.png'},			
-			{num:2,src:'img/Portfolio2.png'},
-			{num:3,src:'img/Portfolio3.png'},
-			{num:4,src:'img/Portfolio4.png'},
-			{num:5,src:'img/Portfolio5.png'},
+			{num:1,src:'https://i.imgur.com/tsPjIhJ.png',png:'https://i.imgur.com/tsPjIhJ.png',gif:'https://i.imgur.com/KrBGi8T.mp4'},			
+			{num:2,src:'https://i.imgur.com/qCZtBcJ.png',png:'https://i.imgur.com/qCZtBcJ.png',gif:'https://i.imgur.com/un3NtiC.mp4'},
+			{num:3,src:'https://i.imgur.com/iLJTohD.png',png:'https://i.imgur.com/iLJTohD.png',gif:'https://i.imgur.com/u07gx7B.mp4'},
+			{num:4,src:'https://i.imgur.com/VznWKE7.png',png:'https://i.imgur.com/VznWKE7.png',gif:'https://i.imgur.com/lcSetmt.mp4'},
+			{num:5,src:'https://i.imgur.com/AeVqgpr.png',png:'https://i.imgur.com/hNj42v7.png',gif:'https://i.imgur.com/6Ch2Q5V.mp4'},
 		],
 	},
 	methods: {
@@ -122,18 +122,15 @@ const vm = new Vue({
 			var mouseFunction = document.getElementById('mouseFunction');
 			mouseFunction.style['background-color'] = "";
 		},
-		imgplay(num){//作品集頁面，點擊則會換成動圖			
+		imgplay(num){//作品集頁面，點擊則會換成動圖		//因為gif太大，放到IMG會轉成影片，就不使用這功能了。	
 			console.log("in");			
 			console.log(this.portfolios[num].src);
 			let tempStr = this.portfolios[num].src;
 			let types = tempStr.substr(tempStr.length-3,3);
-			let url = tempStr.substr(0,tempStr.length-3);
 			if(types=="png"){
-				url = url+"gif";
-				this.portfolios[num].src = url;
-			}else if(types=="gif"){
-				url = url+"png";
-				this.portfolios[num].src = url;
+				this.portfolios[num].src = this.portfolios[num].gif;
+			}else{
+				this.portfolios[num].src = this.portfolios[num].png;
 			}
 		}
 	},

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <title>I.F.D&B.D.</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css_js/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css_js/modern-business.css" rel="stylesheet" />
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="css_js/jquery.min.js"></script>
+  <!--script src="bootstrap.bundle.min.js"></script-->
+  <script src="css_js/bootstrap.bundle.min.js"></script>
+
+  <!-- Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+
+
+  <!-- Custom styles for this template -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  <link rel="stylesheet" type="text/css" href="css_js/style.css" />
+
+
+</head>
+
+<body style="background-color:transparent">
+  <div id="VueApp">
+    <!--上排按鈕-->
+    <!-- iframe使用會擋到內部元件，所以直接把語法貼過來用 
+      <iframe id="ifrme" class="iframeTop fixed-top" scrolling="no" src="menu.html" frameborder="0" 
+      allowfullscreen ></iframe>    
+    -->
+    <nav class="navbar  menu fixed-top ">
+      <a href="index.html" target="_parent">
+        <img class="logo" src="img/LOGO.png" />
+      </a>
+
+      <div @click="listBtn()" id="listBtn" class="hide-in-web">
+        <img src="img/ListBTN.svg" />
+      </div>
+
+      <div class="list-hide-in-web navbar-collapse" id="HidAndShow">
+        <ul class="navbar-nav text-center ml-auto">
+          <il>
+            <a href="Page1.html" class="nav-linkDIV" target="_parent">關於我</a>
+          </il>
+          <il>
+            <a href="Page2.html" class="nav-linkDIV" target="_parent">作品集</a>
+          </il>
+          <il>
+            <a href="Page3.html" class="nav-linkDIV" target="_parent">聯絡我</a>
+          </il>
+          <il>
+            <span class="line">│</span>
+            <a data-v-2c81422f="" href="https://www.facebook.com/IsFlyingDream" target="_blank" class="out-link">
+              <img src="img/BTN-facebook.svg" alt="" />
+            </a>
+            <a data-v-2c81422f="" href="https://www.pixiv.net/users/2567810" target="_blank" class="out-link">
+              <img src="img/BTN-pixiv.svg" alt="" />
+            </a>
+            <a data-v-2c81422f="" href="https://twitter.com/IsFlyingDream" target="_blank" class="out-link">
+              <img src="img/BTN-twitter.svg" alt="" />
+            </a>
+            <a data-v-2c81422f="" href="https://www.instagram.com/isflyingdream/" target="_blank" class="out-link">
+              <img src="img/BTN-instagram.svg" alt="" />
+            </a>
+            <!--
+						<a data-v-2c81422f="" href="https://www.plurk.com/IsFlyingDream" target="_blank"
+							class="out-link">
+							<img src="img/BTN-Plurk.svg" alt="" />
+						</a>
+						-->
+            <span class="line">│</span>
+          </il>
+        </ul>
+      </div>
+
+    </nav>
+
+
+    <!--本頁內容-->
+    <div class="ServiceDIV text-center pt-5 ">
+      <h2><strong><u>作品集</u></strong></h2>
+      <p><small>以下僅放部分程式方面的專案</small></p>
+      <a href="https://drive.google.com/drive/folders/0B0qIIhiAQcdKVE9ELVhxd0UyUms?resourcekey=0-OgX3M_8T_zLk27inonwTFg&usp=sharing"
+        target="_blank">總連結</a>
+      <div class="row justify-content-center">
+        <div class="col-10 col-sm-5 col-xl-3 m-2 shadow">
+          <img class="col-12 mt-3" :src="portfolios[0].src" /><!--拿掉@click="imgplay(0)"-->
+          <h3><strong>活菌禁區</strong></h3>
+          <a class="Portfolio-url"
+            href="https://drive.google.com/drive/folders/1tqVxISXyxBeb2xq03OfrifiXBumpgBiN?usp=sharing"
+            target="_blank">作品連結</a>
+          <p>Arduino、Flash , AS3.0</p>
+          <p>以Flash與Arduino製作的互動裝置遊戲，以光敏電阻偵測手電筒的光源，控制場面上的光源位置與大小，點按鈕則可以切換不同的消毒劑。</p>
+          
+        </div>
+        <div class="col-10 col-sm-5 col-xl-3 m-2 shadow"><!--拿掉@click="imgplay(2)"-->
+          <img class="col-12 mt-3" :src="portfolios[2].src" />
+          <h3><strong>CloverCake</strong></h3>
+          <a class="Portfolio-url"
+            href="https://drive.google.com/drive/folders/1W9GuLillOiw-a1TanYiiW_fc7DtNnXY8?usp=sharing"
+            target="_blank">作品連結</a>
+          <p>Flash , AS3.0</p>
+          <p>以Flash製作蛋糕的輕鬆小品，設計元素以幸運草為輔，遊玩簡單，風格獨特，曾入圍巴哈姆特的比賽</p>
+          
+        </div>
+
+        <div class="col-10 col-sm-5 col-xl-3 m-2 shadow"><!--拿掉@click="imgplay(3)"-->
+          <img class="col-12 mt-3" :src="portfolios[3].src" />
+          <h3><strong>農莊保衛戰</strong></h3>
+          <a class="Portfolio-url"
+            href="https://drive.google.com/drive/folders/1eW1-xZwIPKgrSffCZdqWEHSY-0kUJ35d?usp=sharing"
+            target="_blank">作品連結</a>
+          <p>Flash , ActionScript 3.0, Android Studio </p>
+          <p>這是一款以Flash所製作的手機遊戲，採用棒打老虎雞吃蟲的核心來遊玩，跟隨關卡越後面，難度越難，中心所長出來的植物也會成為阻礙物，是款簡單而吃反應的小遊戲。</p>
+          
+        </div>
+        <div class="col-10 col-sm-5 col-xl-3 m-2 shadow"><!--拿掉@click="imgplay(1)"-->
+          <img class="col-12 mt-3" :src="portfolios[1].src" />
+          <h3><strong>Fouting</strong></h3>
+          <a class="Portfolio-url align-bottom "
+          href="https://drive.google.com/drive/folders/1k6xvmlg5zBvYG68I8IRmA6khYYvr3ibe?usp=sharing"
+          target="_blank">作品連結</a>
+          <p>Android Studio , PHP 5.3.0 , MySQL 5.1.4 , Google Maps API</p>
+          <p>這是一款Android的通訊軟體，除了有LINE的文字與即時通訊的功能，額外特殊的功能則是：
+            『糾團外出』多人位置顯示，可以看到所有人在地圖的動向</p>
+            
+         
+
+        </div>
+        <div class="col-10 col-sm-10 col-xl-6 m-2 shadow"><!--拿掉@click="imgplay(4)"-->
+          <img class="col-12 mt-3" :src="portfolios[4].src" />
+          <h3><strong>KarmaChain</strong></h3>
+          <a class="Portfolio-url mb-2" class="mb-0"
+            href="https://drive.google.com/drive/folders/1XonYBtbpgru2hDWW7_uiPminntI75JmG?usp=sharing"
+            target="_blank">作品連結</a>
+          <p>Unity , C#</p>
+          <p>使用unity所製作的一款策略模擬遊戲，玩家身為遊戲中主人翁，為了躲避死神所下的死亡詛咒，需要在午夜以前阻止未知事件到達死亡事件將會引發的終點，若提前推斷出未知事件下一步，即可成功阻止事件進行!!
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="css_js/MyScript.js"></script>
+</body>

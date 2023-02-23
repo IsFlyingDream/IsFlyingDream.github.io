@@ -8,46 +8,55 @@
 	<title>I.F.D&B.D.</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="css_js/bootstrap.min.css" rel="stylesheet" />
-	<link href="css_js/modern-business.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+		crossorigin="anonymous"></script>
+	<link href="css/modern-business.css" rel="stylesheet" />
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="css_js/jquery.min.js"></script>
-	<script src="css_js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
 	<!--script src="https://cdn.jsdelivr.net/gh/IsFlyingDream/IsFlyingDream.github.io/bootstrap.bundle.min.js"></script-->
 
 	<!-- Vue -->
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 	<!-- Custom styles for this template -->
 	<link rel="icon" type="image/png" href="img/favicon.png" />
-	<link rel="stylesheet" type="text/css" href="css_js/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 
 </head>
 
 <body>
-	<div id="VueApp">
+	<div id="VueApp" class="container" >
 		<!--上排按鈕↓↓ 因為ICON大小與其他頁面的iframe不同  所以保留程式碼-->
 		<nav class="navbar  menuIndex fixed-top  IndexShadow" id="mouseFunction" @mouseover=" mouseOver() "
 			@mouseout=" mouseOut() ">
 			<a href="index.html" target="_parent">
 				<img class="Indexlogo" src="img/LOGO.png" />
 			</a>
-			<div id="listBtn" @click="IndexlistBtn()" class="hide-in-web">
+			<a id="listBtn" @click="IndexlistBtn()" class="hide-in-web">
 				<img src="img/ListBTN.svg" />
-			</div>
+			</a>
 
 			<div class="list-hide-in-web navbar-collapse" id="HidAndShow">
 				<ul class="navbar-nav text-center ml-auto">
 					<li>
-						<a href="Page1.html" class="nav-linkDIV" target="_parent">關於我</a>
+						<!-- <a href="Page1.html" class="nav-linkDIV" target="_parent">關於我</a> -->
+						<a @click="click_about" class="nav-linkDIV" target="_parent">關於我</a>
 					</li>
 					<li>
-						<a href="Page2.html" class="nav-linkDIV" target="_parent">作品集</a>
+						<a @click="click_vue" class="nav-linkDIV" target="_parent">作品集</a>
 					</li>
+					<!-- <li>
+						<a @click="click_portfolios" class="nav-linkDIV" target="_parent">其他作品集</a>
+					</li> -->
 					<li>
-						<a href="Page3.html" class="nav-linkDIV" target="_parent">聯絡我</a>
+						<a @click="click_contact" class="nav-linkDIV" target="_parent">聯繫方式</a>
 					</li>
 					<li>
 						<span class="line">│</span>
@@ -80,99 +89,189 @@
 		</nav>
 		<!--上排按鈕↑↑-->
 
-
-		<!--頁首大圖輪播由此開始↓↓-->
-		<div id="carouselExampleIndicators" class="carousel slide headDIV" data-ride="carousel"
-			>
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner" role="listbox">
-				<!-- Slide One - Set the background image for this slide in the line below -->
-				<!--輪波圖片建議大小1900x1080-->
-				<a class="carousel-item active" target="_parent"
-					style="background-image: url('img/bsuttA8.jpg');"
-					href="Page2.html">
-					<div class="carousel-caption ">
-						<h1 class="index_page1">紀錄者的書房</h1>
-						<p class="ashow">作品集連結</p>
-					</div>
-				</a>
-				<!-- Slide Three - Set the background image for this slide in the line below -->
-				<!--輪波圖片建議大小1900x1080-->
-				<!--若圖片要連結，直接把DIV改成a標籤-->
-				<a class="carousel-item w-100" target="_parent"
-					style="background-image: url('img/DgZfXuo.jpg')" href="Page1.html">
-					<div class="carousel-caption  ">
-						<h1>關於我</h1>
-						<p class="ashow">自我介紹、技能、經歷</p>
-					</div>
-				</a>
-				<!-- Slide Two - Set the background image for this slide in the line below -->
-				<!--輪波圖片建議大小1900x1080-->
-				<a class="carousel-item w-100" target="_parent"
-					style="background-image: url('img/dCwz6AI.jpg')" href="Page3.html">
-					<div class="carousel-caption ">
-						<h1>聯絡我</h1>
-						<p class="ashow">尋找我的方式</p>
-					</div>
-				</a>
-
-				<!-- 無題錄的內容不採用
-				<a class="carousel-item " target="_blank"
-					style="background-image: url('https://i.imgur.com/4ol7ndL.jpg')"
-					href="https://www.webtoons.com/zh-hant/challenge/無題錄/list?title_no=624722">
-					<div class="carousel-caption  d-md-block">
-						<img class="ComicLogo" src="https://i.imgur.com/4VGxzGe.png" />
-					</div>
-					<div class="carousel-caption  d-md-block">
-						<p class="ashow">歡迎收看奇幻長篇劇情的漫畫~</p>
-					</div>
-					<div class="webtoonIcon">
-						<img src="img/webtoon.svg" />
-					</div>
-				</a>	-->
-			</div>
-			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-		<!--頁首大圖輪播由此結束↑↑-->
-
-
-		<!--服務區內容由此開始↓↓
-		<div class="ServiceDIV text-center">
-			<h2 class="mb-4 mt-5">我們的服務</h2>
-			<div class="row justify-content-around">
-				<div class="centerDIV">
-					<img src="https://i.imgur.com/zqt28Yr.png" alt="" />
-					<h5>線上課程</h5>
-					<p class="text-secondary">8週24小時直播外加課後點評與交流，奠定紮實畫功。</p>
+		<!--本頁內容-->
+		<div class="row mb-5 " id="tag_about">
+			<div class="col-12 pt-5">
+				<div class="text-center">
+					<img src="img/aboutme2.jpg" class="img-circle rounded-circle" height="240">
 				</div>
-				<div class="centerDIV">
-					<img src="https://i.imgur.com/zqt28Yr.png" alt="" />
-					<h5>線上課程</h5>
-					<p class="text-secondary">8週24小時直播外加課後點評與交流，奠定紮實畫功。</p>
+				<div class="text-center pt-2 pb-2">
+					<h2><strong><u>關於我</u></strong></h2>
 				</div>
-				<div class="centerDIV ">
-					<img src="https://i.imgur.com/zqt28Yr.png" alt="" />
-					<h5>線上課程</h5>
-					<p class="text-secondary">8週24小時直播外加課後點評與交流，奠定紮實畫功。</p>
+				<div class="col-auto text-md-center px-4">
+					<p>牡羊座O型，於台中科技大學多媒體設計系畢業。
+						性格認真負責任有衝勁，一旦決定的事情，必會想辦法完成。</p>
+					<p></p>『事情不僅要處理好，更要做到最好。』是我一直以來的做事態度。</p>
+					<p>我喜歡與他人快樂的相處並共同完成目標，對於任何手頭上的事情也都盡最大努力完成。</p>
+				</div>
+				<!-- <hr class="mx-4"> -->
+				<div class="p-5 text-center"><!--我的技能ICON 區-->
+					<div class="row gy-2">
+						<!-- <div class="col-12" style="color: darkgray;"><h4>我的技能</h4></div> -->
+						<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+							<img class="about-img" src="img/aboutme_vue.svg" />
+							<div>VueJs</div>
+						</div>
+						<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+							<img class="about-img" src="img/aboutme_javascript.svg" />
+							<div>JavaScript</div>
+						</div>
+						<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+							<img class="about-img" src="img/aboutme_c.png" />
+							<div>C#</div>
+						</div>
+						<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+							<img class="about-img" src="img/aboutme_window.svg" />
+							<div>HTML</div>
+						</div>
+						<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+							<img class="about-img" src="img/aboutme_bootstrap.svg" />
+							<div>bootstrap</div>
+						</div>
+						<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+							<img class="about-img" src="img/aboutme_github.svg" />
+							<div>GitHub</div>
+						</div>
+						<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+							<img class="about-img" src="img/aboutme_css.png" />
+							<div>CSS</div>
+						</div>
+					</div>
 				</div>
 			</div>
+			<hr class="mx-4">
+			<!-- Vue網頁呈現 -->
+			<div class="col-12 p-2 mt-3" id="tag_vue">
+				<div class="row  g-2">
+					<div class="text-center  m-2">
+						<h2><strong><u>Vue網頁呈現</u></strong></h2>
+						<p><small>以下是曾經做的專案的幾個頁面Demo，頁面資料則是以Vue的axios接收json格式資料。</small></p>
+						<p><small>
+								<a href="https://cdn.jsdelivr.net/gh/IsFlyingDream/test_project/API_response/gcb.json"
+									target="_blank">json網址位置1</a>
+								　/　
+								<a href="https://cdn.jsdelivr.net/gh/IsFlyingDream/test_project/API_response/vans.json"
+									target="_blank">json網址位置2</a>
+							</small></p>
+					</div>
+					<div class="border m-3 shadow">
+						<h4 class="text-center my-3 text-secondary"><u>Page1</u></h4>
+						<iframe style="width: 100%; height: 700px;" src="VueProject1_assets.html"></iframe>
+					</div>
+					<div class="border m-3 shadow">
+						<h4 class="text-center my-3 text-secondary"><u>Page2</u></h4>
+						<iframe style="width: 100%; height: 700px;" src="VueProject1gcb.html"></iframe>
+					</div>
+					<div class="border m-3 shadow">
+						<h4 class="text-center my-3 text-secondary"><u>Page３</u></h4>
+						<iframe style="width: 100%; height: 700px;" src="VueProject1vans.html"></iframe>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- 其他作品集 -->
+			<div class="col-12 text-center pt-5 " id="tag_portfolios">
+				<div class="row justify-content-center g-2">
+					<div class="col-12">
+						<h2><strong><u>其他作品集</u></strong></h2>
+						<p><small>以下僅放部分程式方面的專案</small></p>
+						<a href="https://drive.google.com/drive/folders/0B0qIIhiAQcdKVE9ELVhxd0UyUms?resourcekey=0-OgX3M_8T_zLk27inonwTFg&usp=sharing"
+							target="_blank">總連結</a>
+					</div>
+					<div class="col-12 col-sm-6 col-xl-3">
+						<div class="shadow p-2 h-100">
+							<img class="col-12 mt-3" :src="portfolios[0].src" /><!--拿掉@click="imgplay(0)"-->
+							<h3><strong>活菌禁區</strong></h3>
+							<a class="Portfolio-url"
+								href="https://drive.google.com/drive/folders/1tqVxISXyxBeb2xq03OfrifiXBumpgBiN?usp=sharing"
+								target="_blank">作品連結</a>
+							<p>Arduino、Flash , AS3.0</p>
+							<p>以Flash與Arduino製作的互動裝置遊戲，以光敏電阻偵測手電筒的光源，控制場面上的光源位置與大小，點按鈕則可以切換不同的消毒劑。</p>
+						</div>
+
+					</div>
+					<div class="col-12 col-sm-6 col-xl-3"><!--拿掉@click="imgplay(2)"-->
+						<div class="shadow p-2 h-100">
+							<img class="col-12 mt-3" :src="portfolios[2].src" />
+							<h3><strong>CloverCake</strong></h3>
+							<a class="Portfolio-url"
+								href="https://drive.google.com/drive/folders/1W9GuLillOiw-a1TanYiiW_fc7DtNnXY8?usp=sharing"
+								target="_blank">作品連結</a>
+							<p>Flash , AS3.0</p>
+							<p>以Flash製作蛋糕的輕鬆小品，設計元素以幸運草為輔，遊玩簡單，風格獨特，曾入圍巴哈姆特的比賽</p>
+
+						</div>
+
+					</div>
+					<div class="col-12 col-sm-6 col-xl-3"><!--拿掉@click="imgplay(3)"-->
+						<div class="shadow p-2 h-100">
+							<img class="col-12 mt-3" :src="portfolios[3].src" />
+							<h3><strong>農莊保衛戰</strong></h3>
+							<a class="Portfolio-url"
+								href="https://drive.google.com/drive/folders/1eW1-xZwIPKgrSffCZdqWEHSY-0kUJ35d?usp=sharing"
+								target="_blank">作品連結</a>
+							<p>Flash , ActionScript 3.0, Android Studio </p>
+							<p>這是一款以Flash所製作的手機遊戲，採用棒打老虎雞吃蟲的核心來遊玩，跟隨關卡越後面，難度越難，中心所長出來的植物也會成為阻礙物，是款簡單而吃反應的小遊戲。</p>
+
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-xl-3"><!--拿掉@click="imgplay(1)"-->
+						<div class="shadow p-2 h-100">
+							<img class="col-12 mt-3" :src="portfolios[1].src" />
+							<h3><strong>Fouting</strong></h3>
+							<a class="Portfolio-url align-bottom "
+								href="https://drive.google.com/drive/folders/1k6xvmlg5zBvYG68I8IRmA6khYYvr3ibe?usp=sharing"
+								target="_blank">作品連結</a>
+							<p>Android Studio , PHP 5.3.0 , MySQL 5.1.4 , Google Maps API</p>
+							<p>這是一款Android的通訊軟體，除了有LINE的文字與即時通訊的功能，額外特殊的功能則是：
+								『糾團外出』多人位置顯示，可以看到所有人在地圖的動向</p>
+
+						</div>
+					</div>
+					<div class="col-12 col-sm-12 col-xl-8"><!--拿掉@click="imgplay(4)"-->
+						<div class="shadow p-2 h-100">
+							<img class="col-12 mt-3" :src="portfolios[4].src" />
+						<h3><strong>KarmaChain</strong></h3>
+						<a class="Portfolio-url mb-2" class="mb-0"
+							href="https://drive.google.com/drive/folders/1XonYBtbpgru2hDWW7_uiPminntI75JmG?usp=sharing"
+							target="_blank">作品連結</a>
+						<p>Unity , C#</p>
+						<p>使用unity所製作的一款策略模擬遊戲，玩家身為遊戲中主人翁，為了躲避死神所下的死亡詛咒，需要在午夜以前阻止未知事件到達死亡事件將會引發的終點，若提前推斷出未知事件下一步，即可成功阻止事件進行!!
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
-		服務區內容由此結束↑↑-->
+	</div>
+	<!-- 聯絡我 -->
+	<div class="text-center row py-2" id="tag_contact">
+		<h2><strong><u>聯繫方式</u></strong></h2>
+		<p><small>工作邀約歡迎從以下管道聯絡我</small></p>
+		<div class="container ">
+			<div class="row justify-content-center gy-5">
+				<div class="col-8 col-md-4 ">
+					<div class="shadow">
+						<img class="about-img" src="img/email.svg" />
+						<h4><strong>信箱</strong></h4>
+						<p>ruby29922026@gmail.com</p>
+					</div>
+				</div>
+				<div class="col-8 col-md-4">
+					<div class="shadow">
+						<img class="about-img" src="img/phone-call.svg" />
+						<h4><strong>電話</strong></h4>
+						<p>0980-696-737</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</div>
-	
 </body>
 
-<script src="css_js/MyScript.js"></script>
+<script src="js/MyScript.js"></script>
+
 </html>

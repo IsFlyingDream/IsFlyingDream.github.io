@@ -1,0 +1,251 @@
+/*首頁第一個輪播美編調整↓↓*/
+
+
+/*首頁第一個輪播美編調整↑↑*/
+
+/* 頁首輪播↓↓*/
+h1 { 
+  text-shadow:0 0 0.2em rgba(0, 0, 0, 0.8),-0 -0 0.2em rgba(0, 0, 0, 0.8);
+}
+.ashow{
+  color: white;
+   text-shadow:0 0 0.3em black,-0 -0 0.3em black;
+}
+
+.ComicLogo{
+	width: 400px;
+  height: auto;
+}
+
+body {
+    padding-top: 0px;
+}
+
+.webtoonIcon{
+	position:absolute;
+	bottom:5px;
+	margin-left: 5px;
+	-webkit-filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.3))
+}
+
+.carousel{
+	display:absolute; 
+	justify-content:center; 
+	align-items:center;
+}
+
+#VueApp , .carouselExampleIndicators{
+	height: 100%;
+}
+
+@media screen and   (min-width:1025px){
+	.ComicLogo{
+			width: 40%;
+		  height: auto;
+		}
+}
+
+@media screen and  (max-width: 870px) {
+		.ComicLogo{
+			width: 250px;
+		  height: auto;
+		}
+}
+
+/* 頁首輪播↑↑*/
+
+/*服務欄↓↓*/
+.justify-content-around {
+    justify-content: space-around!important;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.centerDIV{
+	position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+	flex: 0 0 25%;
+}
+.ServiceDIV{
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+	margin-top: 3rem!important;
+}
+.ServiceDIV3{
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+	margin-top: 100px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+
+/*服務欄↑↑*/
+
+/*page3滿版背景圖↓↓*/
+.page3_div{
+	background-color: rgba(255, 255, 255, 0.5);
+	text-shadow: 0 0 0.5em white, 0 0 0.5em white;
+}
+.body3-background{
+	background-image: url('../img/dCwz6AI.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+/*滿版背景圖↑↑*/
+
+/*上方導覽列↓↓*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.menu{
+	background-color: rgba(0, 0, 0, .6);
+	 align-items: flex-start!important;
+}
+.menuIndex{
+	align-items: flex-start!important;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.line{
+    color: white;
+    display: inline-block;
+    padding: .5rem 0rem;
+    text-decoration: none;
+    background-color: transparent;
+}
+.Indexlogo{
+	width: 130px;
+}
+.logo{
+	width: 80px;
+}
+
+.nav-linkDIV{
+	color: #fff !important;
+	display: block;
+	padding: .5rem 1rem;
+}
+.navbar-nav{
+	display: flex;
+	list-style: none;
+	margin-top: 0;
+}
+.navbar-collapse{
+	flex-basis: 100%;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+.out-link {
+    color: white;
+    display: inline-block;
+    padding: .5rem .3rem;
+    text-decoration: none;
+    background-color: transparent;
+    text-align: center;
+    border: 0;
+}
+
+.IndexShadow{
+	text-shadow: 0 0 0.1em black, 0 0 0.1em black;
+	-webkit-filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.7))
+}
+
+@media screen and  (max-width: 870px){
+	.list-hide-in-web{
+		display:none;	
+	}
+}
+@media screen and  (min-width: 870px){
+	.navbar-nav, .nav-linkDIV {
+		flex-direction: row;
+		float: right;
+	}
+	.list-hide-in-web{
+		display:block;	
+	}
+	 .navbar-collapse {
+		
+		flex-basis: auto; 
+		float:right;
+	}
+	.hide-in-web{
+		display:none;	
+	}
+}
+/*上方導覽列↑↑*/
+
+/*外聯上方狀態列設定↓↓*/
+.iframeTop{
+	width: 100%;
+	display:flex; 
+	justify-content:center; 
+	align-items:center;
+	z-index: 10;
+	border: 0px;	
+	height: 250px;	
+}
+/*height: 250px;*/
+/*外聯上方狀態列設定↑↑*/
+
+/*最下方資訊↓↓*/
+footer{
+	background-color: black;
+	color: #fff;
+}
+/*最下方資訊↑↑*/
+
+/*關於我圖片大小↓↓*/
+.about-img{
+	padding: 5px;	
+	height: 80px;
+}
+/* 關於我圖片大小↑↑*/
+
+/*作品集圖片大小↓↓*/
+.Portfolio-url{
+	z-index: 100;
+}
+/* 關於我圖片大小↑↑*/
